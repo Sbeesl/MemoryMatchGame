@@ -43,9 +43,9 @@ struct ContentView: View {
                         isLandscape = geo.size.width > geo.size.height
                 }
             // update orientation whenever the screen size changes (device rotats)
-                .onChange(of: geo.size) { newSize in
+                .onChange(of: geo.size) {
                     withAnimation(.spring()) {
-                        isLandscape = newSize.width > newSize.height
+                        isLandscape = geo.size.width > geo.size.height
                     }
                 }
             }
